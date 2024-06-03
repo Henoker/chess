@@ -1,0 +1,9 @@
+/* src/Square.css */
+.square {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-color: #000;
+    border: 1px solid pink;
+  }
+  
