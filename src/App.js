@@ -24,12 +24,12 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-r from-gray-700 dark:via-gray-800 dark:to-gray-900 text-white flex flex-col items-center justify-center">
       <div className="flex flex-col md:flex-row items-center justify-center w-full">
         <div className="md:w-1/2 p-4">
           <UserInput onCalculate={handleCalculate} />
         </div>
-        <div className="relative md:w-1/2 h-60 w-60">
+        <div className="relative md:w-1/2 h-60 w-60 pl-8">
           <Matrix colors={colors} />
           <Canvas width={220} height={220} position={position} />
         </div>

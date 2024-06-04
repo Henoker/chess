@@ -19,39 +19,39 @@ const UserInput = ({ onCalculate }) => {
   };
 
   const calculatePosition = () => {
-    const sumA = categoryA.reduce((a, b) => a + b, 0)*3 / 15;
-    const sumB = categoryB.reduce((a, b) => a + b, 0)*3 / 30;
+    const sumA = categoryA.reduce((a, b) => a + b, 0) * 3 / 15;
+    const sumB = categoryB.reduce((a, b) => a + b, 0) * 3 / 30;
     console.log(sumA, sumB);
 
     let x = 0;
     let y = 0;
-    if (sumA <= 1 && sumB <= 1) { //low low
+    if (sumA <= 1 && sumB <= 1) { // low low
       x = 37;
       y = 180;
-    } else if (sumA <= 1 && sumB <= 2) {//low medium
+    } else if (sumA <= 1 && sumB <= 2) { // low medium
       x = 114;
       y = 195;
-    } else if (sumA <= 1 && sumB > 2) {//low high
+    } else if (sumA <= 1 && sumB > 2) { // low high
       x = 180;
       y = 193;
-    } else if (sumA <= 2 && sumB <= 1) {//medium low
-        x = 37;
-        y = 118;
-    } else if (sumA <= 2 && sumB <= 2) {//medium medium
-        x = 115;
-        y = 110;
-    } else if (sumA <= 2 && sumB > 2) {//medium high
-        x = 196;
-        y = 110;
-    } else if (sumA > 2 && sumB <= 1) {//high low
-        x = 37;
-        y = 37;
-    } else if (sumA > 2 && sumB <= 2) {//high medium
-        x = 195;
-        y = 115;
-    } else if (sumA > 2 && sumB > 2) {//high high
-        x = 200;
-        y = 40;
+    } else if (sumA <= 2 && sumB <= 1) { // medium low
+      x = 37;
+      y = 118;
+    } else if (sumA <= 2 && sumB <= 2) { // medium medium
+      x = 115;
+      y = 110;
+    } else if (sumA <= 2 && sumB > 2) { // medium high
+      x = 196;
+      y = 110;
+    } else if (sumA > 2 && sumB <= 1) { // high low
+      x = 37;
+      y = 37;
+    } else if (sumA > 2 && sumB <= 2) { // high medium
+      x = 195;
+      y = 115;
+    } else if (sumA > 2 && sumB > 2) { // high high
+      x = 200;
+      y = 40;
     }
 
     onCalculate({ x, y });
@@ -60,12 +60,12 @@ const UserInput = ({ onCalculate }) => {
   return (
     <div className="p-4">
       <h2 className="text-xl font-bold mb-2">Category A</h2>
-      {[...Array(3)].map((_, index) => (
-        <div key={index} className="mb-2">
-          <label className="mr-2">Question {index + 1}:</label>
+      {['Financial Aid to Insurgents', 'Destabilize', 'Intervene for Rebels'].map((question, index) => (
+        <div key={index} className="mb-2 flex items-center">
+          <label className="mr-2 w-2/3">{question}:</label>
           <select
             onChange={(e) => handleSelection('A', index, e.target.value)}
-            className="border p-1"
+            className="border p-1 w-1/3"
           >
             <option value="0">Select</option>
             <option value="5">A</option>
@@ -78,12 +78,12 @@ const UserInput = ({ onCalculate }) => {
         </div>
       ))}
       <h2 className="text-xl font-bold mb-2">Category B</h2>
-      {[...Array(6)].map((_, index) => (
-        <div key={index} className="mb-2">
-          <label className="mr-2">Question {index + 1}:</label>
+      {['Treaty', 'Intervene for Government', 'Military Aid', 'Economic Aid', 'Trade Policy', 'Diplomatic Pressure'].map((question, index) => (
+        <div key={index} className="mb-2 flex items-center">
+          <label className="mr-2 w-2/3">{question}:</label>
           <select
             onChange={(e) => handleSelection('B', index, e.target.value)}
-            className="border p-1"
+            className="border p-1 w-1/3"
           >
             <option value="0">Select</option>
             <option value="5">A</option>
@@ -103,4 +103,5 @@ const UserInput = ({ onCalculate }) => {
 };
 
 export default UserInput;
+
 
