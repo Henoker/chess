@@ -1,21 +1,21 @@
 // src/App.js
 import React, { useState } from 'react';
-import Matrix from './components/Matrix';
+// import Matrix from './components/Matrix';
 import Canvas from './components/Canvas';
 import UserInput from './components/UserInput';
 
 const App = () => {
-  const colors = [
-    'bg-yellow-500',
-    'bg-green-500',
-    'bg-green-500',
-    'bg-red-500',
-    'bg-yellow-500',
-    'bg-green-500',
-    'bg-red-500',
-    'bg-red-500',
-    'bg-yellow-500',
-  ];
+  // const colors = [
+  //   'bg-yellow-500',
+  //   'bg-green-500',
+  //   'bg-green-500',
+  //   'bg-red-500',
+  //   'bg-yellow-500',
+  //   'bg-green-500',
+  //   'bg-red-500',
+  //   'bg-red-500',
+  //   'bg-yellow-500',
+  // ];
 
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -29,9 +29,12 @@ const App = () => {
         <div className="md:w-1/2 p-4">
           <UserInput onCalculate={handleCalculate} />
         </div>
-        <div className="relative md:w-1/2 h-60 w-60 pl-8">
-          <Matrix colors={colors} />
-          <Canvas width={220} height={220} position={position} />
+        <div
+          className="relative md:w-1/2 flex items-center justify-center bg-cover bg-center"
+          style={{ backgroundImage: 'url(https://raw.githubusercontent.com/Henoker/GeoPolitics/master/Matrix%20BOP2.PNG)', width: 580, height: 580 }}
+        >
+          {/* <Matrix colors={colors} /> */}
+          <Canvas width={580} height={580} position={position} />
         </div>
       </div>
       <div className="flex-1 p-4">

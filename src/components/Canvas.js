@@ -10,7 +10,7 @@ const Canvas = ({ width, height, position }) => {
 
     const drawObject = (x, y) => {
       context.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
-      context.fillStyle = 'blue';
+      context.fillStyle = 'black';
       context.fillRect(x, y, 20, 20); // Draw the object
     };
 
