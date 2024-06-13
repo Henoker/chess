@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 // import Matrix from './components/Matrix';
 import Canvas from './components/Canvas';
 import UserInput from './components/UserInput';
+import matrixCover from './matrixCover.PNG'
 
 const App = () => {
   // const colors = [
@@ -31,10 +32,11 @@ const App = () => {
         </div>
         <div
           className="relative md:w-1/2 flex items-center justify-center bg-cover bg-center"
-          style={{ backgroundImage: 'url(https://raw.githubusercontent.com/Henoker/GeoPolitics/master/Matrix%20BOP2.PNG)', width: 580, height: 580 }}
+          // style={{ backgroundImage: 'url(https://raw.githubusercontent.com/Henoker/GeoPolitics/master/Matrix%20BOP2.PNG)', width: 580, height: 580 }}
+          style={{ backgroundImage: `url(${matrixCover})`, width: 400, height: 500 }}
         >
           {/* <Matrix colors={colors} /> */}
-          <Canvas width={580} height={580} position={position} />
+          <Canvas width={500} height={500} position={position} />
         </div>
       </div>
       <div className="flex-1 p-4">
