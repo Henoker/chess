@@ -26,32 +26,32 @@ const UserInput = ({ onCalculate }) => {
     let x = 0;
     let y = 0;
     if (sumA <= 1 && sumB <= 1) { // low low
-      x = 37;
-      y = 180;
+      x = 125;
+      y = 344;
     } else if (sumA <= 1 && sumB <= 2) { // low medium
-      x = 114;
-      y = 195;
+      x = 120;
+      y = 210;
     } else if (sumA <= 1 && sumB > 2) { // low high
-      x = 180;
-      y = 193;
+      x = 128;
+      y = 85;
     } else if (sumA <= 2 && sumB <= 1) { // medium low
-      x = 37;
-      y = 118;
+      x = 126;
+      y = 210;
     } else if (sumA <= 2 && sumB <= 2) { // medium medium
-      x = 115;
-      y = 110;
+      x = 221;
+      y = 218;
     } else if (sumA <= 2 && sumB > 2) { // medium high
-      x = 196;
-      y = 110;
+      x = 221;
+      y = 95;
     } else if (sumA > 2 && sumB <= 1) { // high low
-      x = 37;
-      y = 37;
+      x = 307;
+      y = 341;
     } else if (sumA > 2 && sumB <= 2) { // high medium
-      x = 195;
-      y = 115;
+      x = 218;
+      y = 97;
     } else if (sumA > 2 && sumB > 2) { // high high
-      x = 200;
-      y = 40;
+      x = 311;
+      y = 98;
     }
 
     onCalculate({ x, y });
