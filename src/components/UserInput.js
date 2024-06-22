@@ -1,9 +1,10 @@
-// src/components/UserInput.js
 import React, { useState } from 'react';
+import HelpModal from './HelpModal';
 
 const UserInput = ({ onCalculate }) => {
   const [categoryA, setCategoryA] = useState(Array(3).fill(0));
   const [categoryB, setCategoryB] = useState(Array(6).fill(0));
+  const [visibleModal, setVisibleModal] = useState(null);
 
   const handleSelection = (category, index, value) => {
     const mark = parseInt(value, 10);
@@ -57,8 +58,31 @@ const UserInput = ({ onCalculate }) => {
     onCalculate({ x, y });
   };
 
+  const explanationsA = [
+    'offensive strategy tactic 1 : Aid to insurrgents: There are three types of insurgents: terrorists, guerrillas, and rebels. A powerful and stable government has none of these. Terrorists are the weakest form of insurgents. If the terrorists are successful and grow in power, they become guerrillas and initiate a guerrilla war. If the guerrillas grow in power, they start a civil war Then they are called rebels. Once enemy have identified a likely candidate for subversion,they have two weapons: Aid to Insurgents and Intervene for Rebels. The amount of aid a enemy state can ship depends on the level of insurgency (terrorist level, guerrilas level and rebel level). When the level of aid is higher, the powerful the insurgents will be. This means the regime (the country to be rated) will be affected badly.',
+    'Explanation for Destabilize',
+    'Explanation for Intervene for Rebels'
+  ];
+
+  const explanationsB = [
+    'Explanation for Treaty',
+    'Explanation for Intervene for Government',
+    'Explanation for Military Aid',
+    'Explanation for Economic Aid',
+    'Explanation for Trade Policy',
+    'Explanation for Diplomatic Pressure'
+  ];
+
+  const toggleModal = (category, index) => {
+    const modalId = `${category}-${index}`;
+    setVisibleModal(visibleModal === modalId ? null : modalId);
+  };
+
+  const closeModal = () => {
+    setVisibleModal(null);
+  };
+
   return (
-    
     <div className="p-4">
       <h1 className="text-2xl text-center font-bold">GeoPolitics Rating Tool</h1>
       
@@ -66,6 +90,21 @@ const UserInput = ({ onCalculate }) => {
       {['Financial Aid to Insurgents', 'Destabilize', 'Intervene for Rebels'].map((question, index) => (
         <div key={index} className="mb-2 flex items-center">
           <label className="mr-2 w-2/3">{question}:</label>
+          <div className="relative inline-block">
+            <button 
+              className="text-gray-600 transition-colors duration-200 focus:outline-none dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500"
+              onClick={() => toggleModal('A', index)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+              </svg>
+            </button>
+            <HelpModal
+              isVisible={visibleModal === `A-${index}`}
+              onClose={closeModal}
+              content={explanationsA[index]}
+            />
+          </div>
           <select
             onChange={(e) => handleSelection('A', index, e.target.value)}
             className="border p-1 w-1/3"
@@ -84,6 +123,21 @@ const UserInput = ({ onCalculate }) => {
       {['Treaty', 'Intervene for Government', 'Military Aid', 'Economic Aid', 'Trade Policy', 'Diplomatic Pressure'].map((question, index) => (
         <div key={index} className="mb-2 flex items-center">
           <label className="mr-2 w-2/3">{question}:</label>
+          <div className="relative inline-block">
+            <button 
+              className="text-gray-600 transition-colors duration-200 focus:outline-none dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500"
+              onClick={() => toggleModal('B', index)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+              </svg>
+            </button>
+            <HelpModal
+              isVisible={visibleModal === `B-${index}`}
+              onClose={closeModal}
+              content={explanationsB[index]}
+            />
+          </div>
           <select
             onChange={(e) => handleSelection('B', index, e.target.value)}
             className="border p-1 w-1/3"
@@ -106,5 +160,3 @@ const UserInput = ({ onCalculate }) => {
 };
 
 export default UserInput;
-
-
