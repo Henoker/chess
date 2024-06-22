@@ -58,8 +58,11 @@ const UserInput = ({ onCalculate }) => {
   };
 
   return (
+    
     <div className="p-4">
-      <h2 className="text-xl font-bold mb-2">Category A</h2>
+      <h1 className="text-2xl text-center font-bold">GeoPolitics Rating Tool</h1>
+      
+      <h2 className="text-xl font-bold mb-2">National Security Effectiveness</h2>
       {['Financial Aid to Insurgents', 'Destabilize', 'Intervene for Rebels'].map((question, index) => (
         <div key={index} className="mb-2 flex items-center">
           <label className="mr-2 w-2/3">{question}:</label>
@@ -77,7 +80,7 @@ const UserInput = ({ onCalculate }) => {
           <span className="ml-2">{categoryA[index]}</span>
         </div>
       ))}
-      <h2 className="text-xl font-bold mb-2">Category B</h2>
+      <h2 className="text-xl font-bold mb-2">Diplomacy Effectiveness</h2>
       {['Treaty', 'Intervene for Government', 'Military Aid', 'Economic Aid', 'Trade Policy', 'Diplomatic Pressure'].map((question, index) => (
         <div key={index} className="mb-2 flex items-center">
           <label className="mr-2 w-2/3">{question}:</label>
