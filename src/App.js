@@ -25,7 +25,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-700 dark:via-gray-800 dark:to-gray-900 text-white flex flex-col items-center justify-center">
+    <div className="min-h-screen  text-black flex flex-col items-center justify-center">
       <div className="flex flex-col md:flex-row items-center justify-center w-full">
         <div className="md:w-1/2 p-4">
           <UserInput onCalculate={handleCalculate} />
