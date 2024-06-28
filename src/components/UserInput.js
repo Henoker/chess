@@ -65,13 +65,13 @@ const UserInput = ({ onCalculate }) => {
   ];
 
   const explanationsB = [
-    'Explanation for Treaty',
-    'Explanation for Intervene for Government',
-    'Explanation for Military Aid',
-    'Explanation for Economic Aid',
-    'Explanation for Trade Policy',
-    'Explanation for Diplomatic Pressure'
-  ];
+    'defensive strategy tactic 1 : Treaties: The antidote for pressure is a treaty. If a powerful country fear that a client of its may Finlandize to another enemy state, it can bolster that client&apos;s will to resist in several ways. it can send military aid to increase its military power, or it can station troops in that country to help defend it. By increasing its defensive military strength, the powerful country can shore up the flagging confidence of the country to be rated. A treaty implies a degree of commitment by powerfull ally to the regime with which they sign. Powerful countries are, to a greater or lesser degree, guaranteeing the security of the country with which they sign the treaty and the degree of commitment is related to the type of treaty. A treaty establishing diplomatic relations between your two countries committment is very little. In contrast, a nuclear defense treaty is an absolute commitment that  a powerful ally will take all measures possible, including the initiation of a nuclear holocaust, to protect the signatory.',
+    'defensive strategy tactic 2 : Intervene for government: the number of troops that can intervene is always a determinat factor in keeping in power a favored government by the allies. Here Nations are even more sensitive about allowing a foreign power to send troops onto its soil. Furthermore strong allies face limitation of resources because If they really want to send some troops to one country, they may be forced to pull some out of another.',
+    'defensive strategy tactic 3 : Military Aid: This option allows a powerful country to provide weapons (but not soldiers) to a friendly government, It will boost the military power of the government, making it better able to withstand internal insurgencies and external military pressure. When the level of aid is higher the more powerful will be the government. The more powerful the government is the more difficult it will be for insurgents. Every government in the world knows that help from foreign powers always seems to come with sticky strings attached. Most governments are understandably reluctant to accept an unseemly amount of aid from foreign power.This reluctance is directly related to the degree of enmity between the two nations. Thus, some countries would not accept generous offer of military assistance they would undoubtedly suspect some fiendish infidel subterfuge. On the other hand, some countries has already cast thier lot with foreign powers and would have no reservations about accepting scads of military aid. Here military aid will alleviate the budget restriction of the receiving nation. This will help the receiving nation to divert it&apos;s budget to other economic activies so that the can alleviate political pressures.',
+    'defensive strategy tactic 4 : Economic Aid: Foreign powers can protect a friendly regime from coups by assisting its economy. This is done with economic aid, a direct transfer of money from foreign powers economy to the recipient&apos;s. Foreign power GDP will be reduced with the secondary effect of reducing the amount of money available for military expenditures. The recipent&apos;s economy will be boosted; this will increase public satisfaction with the regime. Thus, economic aid reduces a country&apos;s vulnerability to coups d&apos;etat. Of course, the magnitude of the effect is dependent on the wealth of the recipient. If foreign powers dump 4 billion dollars on poverty-stricken country, that amounts have significant impact on the recipent GDP; the effect on the recipent will be electric. Basking in their immense wealth, their discontent with the government will completely vanish. However, a wealthier country is much harder to buy off. Four billion dollars is but a drop in the bucket for such a country. Thus, it is very difficult to save a wealthy nation with economic assistance.',
+    'defensive strategy tactic 5 : Trade: A powerful country may adjust its trade policy toward any country. This policy will have no effect on the economy of the targeted nation. It will, however, make a diplomatic statement that will affect relations between two countries.',                                 
+    'defensive strategy tactic 6 : Finlandization, a geopolitical tactic, emerged from Finland&apos;s postwar experience as an ally of Nazi Germany. Despite not being invaded by the USSR due to Soviet preoccupations, Finland faced significant diplomatic challenges as the West did not support a former Nazi ally. Finlandization occurs when a nation, feeling vulnerable and lacking external support, adjusts its stance to appease a powerful, hostile foreign power. Superpowers use Diplomatic Pressure and Treaties to influence nations. Pressure involves intimidation through actions like naval maneuvers or critical speeches, highlighting the power disparity. This can lead a nation to Finlandize, praising the superpower and increasing military spending at the expense of consumer welfare, potentially causing public unrest or a coup. Unlike continuous tactics, pressure is a one-time action lasting a year.'
+    ];
 
   const toggleModal = (category, index) => {
     const modalId = `${category}-${index}`;
@@ -89,9 +89,8 @@ const UserInput = ({ onCalculate }) => {
       <h2 className="text-xl font-bold mb-2">National Security Effectiveness</h2>
       {['Financial Aid to Insurgents', 'Destabilize', 'Intervene for Rebels'].map((question, index) => (
         <div key={index} className="mb-2 flex items-center">
-          <label className="mr-2 w-2/3">{question}:</label>
-          <div className="relative inline-block">
-            <button 
+          <label className="mr-2 w-2/3">{question}:
+          <button 
               className="text-gray-600 transition-colors duration-200 focus:outline-none dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500"
               onClick={() => toggleModal('A', index)}
             >
@@ -99,6 +98,10 @@ const UserInput = ({ onCalculate }) => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
               </svg>
             </button>
+          </label>
+       
+          <div className="relative inline-block">
+            
             <HelpModal
               isVisible={visibleModal === `A-${index}`}
               onClose={closeModal}
@@ -122,9 +125,8 @@ const UserInput = ({ onCalculate }) => {
       <h2 className="text-xl font-bold mb-2">Diplomacy Effectiveness</h2>
       {['Treaty', 'Intervene for Government', 'Military Aid', 'Economic Aid', 'Trade Policy', 'Diplomatic Pressure'].map((question, index) => (
         <div key={index} className="mb-2 flex items-center">
-          <label className="mr-2 w-2/3">{question}:</label>
-          <div className="relative inline-block">
-            <button 
+          <label className="mr-2 w-2/3">{question}:
+          <button 
               className="text-gray-600 transition-colors duration-200 focus:outline-none dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500"
               onClick={() => toggleModal('B', index)}
             >
@@ -132,6 +134,9 @@ const UserInput = ({ onCalculate }) => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
               </svg>
             </button>
+          </label>
+          <div className="relative inline-block">
+            
             <HelpModal
               isVisible={visibleModal === `B-${index}`}
               onClose={closeModal}
