@@ -73,6 +73,23 @@ const UserInput = ({ onCalculate }) => {
     'defensive strategy tactic 6 : Finlandization, a geopolitical tactic, emerged from Finland&apos;s postwar experience as an ally of Nazi Germany. Despite not being invaded by the USSR due to Soviet preoccupations, Finland faced significant diplomatic challenges as the West did not support a former Nazi ally. Finlandization occurs when a nation, feeling vulnerable and lacking external support, adjusts its stance to appease a powerful, hostile foreign power. Superpowers use Diplomatic Pressure and Treaties to influence nations. Pressure involves intimidation through actions like naval maneuvers or critical speeches, highlighting the power disparity. This can lead a nation to Finlandize, praising the superpower and increasing military spending at the expense of consumer welfare, potentially causing public unrest or a coup. Unlike continuous tactics, pressure is a one-time action lasting a year.'
     ];
 
+
+    const optionsA = [
+      ['More than 1 billion', 'up to 500 million', 'up to 100 million', 'Up to 20 million', 'None',    ],
+      ['Provoke assasination or Coup detat', 'Incite riots', 'Fund opposition', 'Encourage Dissidents', 'None'],
+      ['More than 20,000 troops', 'up to 20000 troops', 'up to 5000 troops', 'up to 1000 troops', 'None',]
+      
+    ];
+  
+    const optionsB = [
+      ['None or diplomatic relations', 'trade relations', 'military base', 'conventinal weapons', 'nuclear deal'],
+      ['None', 'up to 1000 troops', 'up to 5000 troops', 'up to 20000 troops', 'More than 20000 troops'],
+      ['None', 'Up to 20 million', 'up to 100 million', 'Up to 500 million', 'More than 500000'],
+      ['None', 'Up to 20 million', 'up to 100 million', 'Up to 500 million', 'More than 500000'],
+      ['Trade or tech emabargo', 'stiff quota', 'Trade Quota', 'Normal Trade','Favorable Trade'],
+      ['Offensive diplomacy', 'Intense pressure', 'Moderate Pressure', 'public posturing', 'None or quiet diplomacy']
+    ];
+
   const toggleModal = (category, index) => {
     const modalId = `${category}-${index}`;
     setVisibleModal(visibleModal === modalId ? null : modalId);
@@ -112,12 +129,10 @@ const UserInput = ({ onCalculate }) => {
             onChange={(e) => handleSelection('A', index, e.target.value)}
             className="border p-1 w-1/3"
           >
-            <option value="0">Select</option>
-            <option value="5">5</option>
-            <option value="4">4</option>
-            <option value="3">3</option>
-            <option value="1">2</option>
-            <option value="1">1</option>
+             <option value="0">Select</option>
+            {optionsA[index].map((option, i) => (
+              <option key={i} value={i + 1}>{option}</option>
+            ))}
           </select>
           <span className="ml-2">{categoryA[index]}</span>
         </div>
@@ -148,11 +163,9 @@ const UserInput = ({ onCalculate }) => {
             className="border p-1 w-1/3"
           >
             <option value="0">Select</option>
-            <option value="5">5</option>
-            <option value="4">4</option>
-            <option value="3">3</option>
-            <option value="1">2</option>
-            <option value="1">1</option>
+            {optionsB[index].map((option, i) => (
+              <option key={i} value={i + 1}>{option}</option>
+            ))}
           </select>
           <span className="ml-2">{categoryB[index]}</span>
         </div>
