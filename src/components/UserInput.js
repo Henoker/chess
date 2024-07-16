@@ -26,7 +26,10 @@ const UserInput = ({ onCalculate }) => {
 
     let x = 0;
     let y = 0;
-    if (sumA <= 1 && sumB <= 1) { // low low
+    if (sumA === 0 && sumB === 0) { // low low
+      x = 0;
+      y = 0;
+    } else if (sumA <= 1 && sumB <= 1){
       x = 125;
       y = 344;
     } else if (sumA <= 1 && sumB <= 2) { // low medium
