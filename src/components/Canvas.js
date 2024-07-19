@@ -9,11 +9,11 @@ const Canvas = ({ width, height, position }) => {
     const context = canvas.getContext('2d');
     const image = imageRef.current;
 
-    image.src = 'king5.png'; // Replace with the actual path to your image
+    image.src = 'king5.png'; 
 
     const drawObject = (x, y) => {
       context.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
-      context.drawImage(image, x, y, 40, 40); // Draw the object
+      context.drawImage(image, x, y, 50, 50); // Draw the object
     };
 
     // Draw the object based on the computed position when the image loads
@@ -44,7 +44,7 @@ const Canvas = ({ width, height, position }) => {
       const canvas = canvasRef.current;
       const context = canvas.getContext('2d');
       context.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
-      context.drawImage(imageRef.current, position.x, position.y, 40, 40); // Draw the object
+      context.drawImage(imageRef.current, position.x, position.y, 50, 50); // Draw the object
     }
   }, [position]);
 
