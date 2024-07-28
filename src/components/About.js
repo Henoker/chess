@@ -4,8 +4,8 @@ const About = () => {
   return (
     <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-100 dark:text-gray-800">
 	<div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
-		<img src="https://source.unsplash.com/random/480x360" alt="" className="w-full h-60 sm:h-96 dark:bg-gray-500" />
-		<div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md dark:bg-gray-50">
+		<img src="https://images.unsplash.com/photo-1716315130431-9a2533a62f3e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/480x360" alt="lat" className="w-full h-60 sm:h-96 dark:bg-gray-500" />
+		<div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-gray-50">
 			<div className="dark:text-gray-800">
 				<p>Geopolitical rating is based on the Balance of power game which is adopted by pentagon's 
                     simulations system. The tool was used during cold war period, 
