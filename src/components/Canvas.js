@@ -12,7 +12,7 @@ const Canvas = ({ width, height, position }) => {
     image.src = 'king5.png'; 
 
     const drawObject = (x, y) => {
-      context.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+      context.clearRect(0,0, canvas.width, canvas.height); // Clear canvas
       context.drawImage(image, x, y, 50, 50); // Draw the object
     };
 
