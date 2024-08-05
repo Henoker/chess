@@ -20,10 +20,10 @@ const Guideline = () => {
               alt=""
             />
             <div className="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
-              <details>
-                <summary className="font-semibold text-gray-800 dark:text-white md:text-xl cursor-pointer">
+              <div>
+                <p className="font-semibold text-gray-800 dark:text-white md:text-xl cursor-pointer">
                   National Security Effectiveness
-                </summary>
+                </p>
                 <div className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
                   <p>
                     The goal in National security effectiveness is to defend offense strategy of an enemy state.
@@ -86,7 +86,7 @@ const Guideline = () => {
                     </p>
                   </details>
                 </div>
-              </details>
+              </div>
             </div>
           </div>
           <div>
@@ -96,10 +96,10 @@ const Guideline = () => {
               alt=""
             />
             <div className="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
-              <details>
-                <summary className="font-semibold text-gray-800 dark:text-white md:text-xl cursor-pointer">
+              <div>
+                <p className="font-semibold text-gray-800 dark:text-white md:text-xl cursor-pointer">
                   Diplomacy Effectiveness Rating Guideline
-                </summary>
+                </p>
                 <div className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
                   <p>
                     The goal in Diplomacy effectiveness is to attract strong allies from tier 1 and tier 2 countries.
@@ -214,7 +214,7 @@ const Guideline = () => {
                     </p>
                   </details>
                 </div>
-              </details>
+              </div>
             </div>
           </div>
         </div>
