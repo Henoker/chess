@@ -50,7 +50,7 @@ The Geo-Political Analytical Tool is hosted on GitHub for easy access and distri
 
 - **React.js**: JavaScript framework used for building the front end.
 - **Tailwind CSS**: Used for styling to create a responsive and clean UI.
-- **GitHub**: For code hosting, version control, and deployment.
+- **GitHub**: For code hosting, version control, and deployment. Here is the link for the live app https://henoker.github.io/chess
 
 ## Getting Started
 
@@ -62,11 +62,11 @@ The Geo-Political Analytical Tool is hosted on GitHub for easy access and distri
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/geo-political-analytical-tool.git
+   git clone https://github.com/Henoker/chess
    ```
 2. Navigate to the project directory:
    ```
-   cd geo-political-analytical-tool
+   cd chess
    ```
 3. Install the required dependencies:
    ```
